@@ -16,7 +16,7 @@ pipeline {
         stage('SCM Checkout') {
             steps {
                 // Get some code from a GitHub repository
-                git branch: 'main', url: 'https://github.com/TejasPatel21/java-docker.git'
+                git branch: 'main', url: 'https://github.com/TejasPatel21/java-devops.git'
             }
 		}
         stage('Maven Build') {
