@@ -1,0 +1,9 @@
+- hosts: kubadmin
+  become: yes
+  tasks: 
+  - name: copy k8 file
+    copy:
+      src: /home/devopsadmin/workspace/javapipeline/k8smvndeployment.yaml
+      dest: /home/kubadmiins/
+  - name: create new deployment
+    shell: kubectl apply -f /home/kubadmiins/k8smvndeployment.yaml

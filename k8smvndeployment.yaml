@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: javadeploy
+  labels:
+    app: java-mvn-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: java-mvn-app
+  template:
+    metadata:
+      labels:
+        app: java-mvn-app
+    spec:
+      containers:
+      - name: java-mvn-container
+        image: patel21/kubdocker
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: java-np-service
+  labels:
+    app: java-mvn-app
+spec:
+  selector:
+    app: java-mvn-app
+
+  type: NodePort
+  ports:
+  - nodePort: 32700
+    port: 8080
+    targetPort: 8080
