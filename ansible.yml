@@ -7,5 +7,3 @@
       dest: /home/kubadmiins/
   - name: create new deployment
     shell: kubectl apply -f /home/kubadmiins/k8smvndeployment.yaml
-  - name: create prometheus monitoring
-    shell: /home/kubadmiins/prometheus-kubernetes/deploy 
