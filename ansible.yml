@@ -5,7 +5,7 @@
     copy:
       src: /home/devopsadmin/workspace/java-devops/
       dest: /home/kubadmiins/
-  # - name: create new deployment
-  #   shell: kubectl apply -f /home/kubadmiins/k8smvndeployment.yaml
-  # - name: create prometheus monitoring
-  #   shell: ./deploy 
+  - name: create new deployment
+    shell: kubectl apply -f /home/kubadmiins/k8smvndeployment.yaml
+  - name: create prometheus monitoring
+    shell: ./deploy 
