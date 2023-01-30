@@ -3,7 +3,7 @@
   tasks: 
   - name: copy k8 file
     copy:
-      src: /home/devopsadmin/workspace/javapipeline/
+      src: /home/devopsadmin/workspace/java-devops/
       dest: /home/kubadmiins/
   # - name: create new deployment
   #   shell: kubectl apply -f /home/kubadmiins/k8smvndeployment.yaml
