@@ -2,9 +2,10 @@
   become: yes
   tasks: 
   - name: git 
-    get_url:
-      url: https://github.com/TejasPatel21/k8s-dashboard.git
+    git:
+      repo: https://github.com/TejasPatel21/k8s-dashboard.git
       dest: /home/kubadmiins/
+      force: true
   - name: create new deployment
     shell: kubectl apply -f /home/kubadmiins/k8smvndeployment.yaml
   - name: create prometheus monitoring
