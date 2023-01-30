@@ -1,11 +1,10 @@
 - hosts: kubadmin
   become: yes
   tasks: 
-  - name: git 
-    git:
-      repo: https://github.com/TejasPatel21/k8s-dashboard.git
+  - name: copy k8 file
+    copy:
+      src: /home/devopsadmin/workspace/java-devops/
       dest: /home/kubadmiins/
-      force: true
   - name: create new deployment
     shell: kubectl apply -f /home/kubadmiins/k8smvndeployment.yaml
   - name: create prometheus monitoring
