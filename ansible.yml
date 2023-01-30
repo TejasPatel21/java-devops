@@ -3,9 +3,9 @@
   tasks: 
   - name: copy k8 file
     copy:
-      src: /home/devopsadmin/workspace/java-devops/
+      src: /home/devopsadmin/workspace/java-devops/k8smvndeployment.yaml
       dest: /home/kubadmiins/
   - name: create new deployment
     shell: kubectl apply -f /home/kubadmiins/k8smvndeployment.yaml
   - name: create prometheus monitoring
-    shell: ./deploy 
+    shell: /home/kubadmiins/prometheus-kubernetes/deploy 
