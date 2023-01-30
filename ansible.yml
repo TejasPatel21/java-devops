@@ -1,9 +1,9 @@
 - hosts: kubadmin
   become: yes
   tasks: 
-  - name: copy k8 file
-    copy:
-      src: /home/devopsadmin/workspace/java-devops/
+  - name: git 
+    git:
+      url: https://github.com/TejasPatel21/k8s-dashboard.git
       dest: /home/kubadmiins/
   - name: create new deployment
     shell: kubectl apply -f /home/kubadmiins/k8smvndeployment.yaml
